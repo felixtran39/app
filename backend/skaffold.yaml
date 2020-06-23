@@ -1,7 +1,7 @@
 apiVersion: skaffold/v2beta4
 kind: Config
 metadata:
-  name: backend-config
+  name: config
 build:
   googleCloudBuild:
     projectId: '[PROJECT_ID]' # {"type":"string","x-kustomize":{"setter":{"name":"project_id","value":"[PROJECT_ID]"}}}
