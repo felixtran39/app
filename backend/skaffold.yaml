@@ -8,7 +8,5 @@ build:
   artifacts:
     - image: '[GCR_IMG_1]' # {"type":"string","x-kustomize":{"setter":{"name":"gcr_img_1","value":"[GCR_IMG_1]"}}}
 deploy:
-  kubectl:
-    manifests:
-      - config/base/redis-*/deployment.yaml
-      - config/base/redis-*/service.yaml
+  kustomize:
+    paths:["./config/base/redis-master","./config/base/redis-slave"]
