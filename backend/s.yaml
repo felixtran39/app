@@ -4,9 +4,9 @@ metadata:
   name: backend-config
 build:
   googleCloudBuild:
-    projectId: '[PROJECT_ID]' # {"type":"string","x-kustomize":{"setter":{"name":"project_id","value":"[PROJECT_ID]"}}}
+    projectId: 'yuwenma-gke-playground' # {"type":"string","x-kustomize":{"setter":{"name":"project_id","value":"yuwenma-gke-playground"}}}
   artifacts:
-    - image: '[GCR_IMG_1]' # {"type":"string","x-kustomize":{"setter":{"name":"gcr_img_1","value":"[GCR_IMG_1]"}}}
+  - image: '[GCR_IMG_1]' # {"type":"string","x-kustomize":{"setter":{"name":"gcr_img_1","value":"[GCR_IMG_1]"}}}
 deploy:
-  kustomize:
-    paths:["./config/base/redis-master","./config/base/redis-slave"]
+  kustomize: 
+    paths: ["./config/base/redis-master","./config/base/redis-slave"]

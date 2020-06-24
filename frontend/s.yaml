@@ -4,9 +4,9 @@ metadata:
   name: frontend-config
 build:
   googleCloudBuild:
-    projectId: '[PROJECT_ID]' # {"type":"string","x-kustomize":{"setter":{"name":"project_id","value":"[PROJECT_ID]"}}}
+    projectId: 'yuwenma-gke-playground' # {"type":"string","x-kustomize":{"setter":{"name":"project_id","value":"yuwenma-gke-playground"}}}
   artifacts:
-    - image: '[GCR_IMG_2]' # {"type":"string","x-kustomize":{"setter":{"name":"gcr_img_2","value":"[GCR_IMG_2]"}}}
+  - image: '[GCR_IMG_2]' # {"type":"string","x-kustomize":{"setter":{"name":"gcr_img_2","value":"[GCR_IMG_2]"}}}
 deploy:
   kustomize:
-    paths:["./config/base/frontend"]
+    paths: ["./config/base/frontend"]
